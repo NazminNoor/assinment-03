@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+       <!-- font Awsome link  -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Custom CSS for animations */
+    .hero-image {
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hero-title {
+        animation: fadeInLeft 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+</head>
+<body class="bg-gray-100">
+<header>
+
+        <!-- Navbar -->
+        <nav class=" ">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+                <!-- Logo -->
+                <div class="text-green-600 text-xl font-bold flex items-center">
+                    <span class="mr-2"><img src="imges/logo-header.png" alt=""></span> 
+                </div>
+    
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-6 text-gray-700">
+                    <li><a href="#" class="hover:text-green-500">Product</a></li>
+                    <li><a href="#" class="hover:text-green-500">Services</a></li>
+                    <li><a href="#" class="hover:text-green-500">Contact us</a></li>
+                </ul>
+    
+                <!-- Icons & Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-green-500"><span><i class="fa-solid fa-magnifying-glass"></i></span></button>
+                    <button class="text-gray-600 hover:text-green-500"><span>🛒</span></button>
+                    <button class="border border-green-500 text-green-500 px-4 py-1 rounded-md hover:bg-green-100">Login</button>
+                    <button class="bg-green-500 text-white px-4 py-1 rounded-md hover:bg-green-600">Register</button>
+                </div>
+    
+                <!-- Mobile Menu Button -->
+                <label for="menu-toggle" class="md:hidden text-gray-600 text-2xl cursor-pointer">☰</label>
+                <input type="checkbox" id="menu-toggle" class="hidden peer">
+            </div>
+    
+            <!-- Mobile Menu (Initially Hidden) -->
+            <div class="hidden peer-checked:flex flex-col items-center bg-white shadow-md py-4 border-b-4 border-green-500 md:hidden">
+                <a href="#" class="block py-2 text-gray-700 hover:text-green-500">Product</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-green-500">Services</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-green-500">Contact us</a>
+            </div>
+        </nav>
+
+
+        <section class="hero bg-gray-200 py-20">
+            <div class="container mx-auto text-center">
+                <h1 class="  hero-title  text-5xl font-bold mb-4">
+                    Freshness <span class="text-green-500">You Can <br> Count</span> On, Prices You'll Love!
+                </h1>
+                <p class="text-lg mb-8">
+                    Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day! <br>
+                    "Your trusted source for fresh, delicious ingredients and unbeatable value." 
+                </p>
+                <div class="hero-image">
+                    <img src="imges/hero-vegetables.png" alt="Hero Image" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+</header>
+
+<main>
+    <!-- First section code star  -->
+     <section class="py-20 bg-white">
+        <h2 class="text-3xl font-bold mb-4 text-left text-green-500 mx-7 ">Services</h2>
+        <div class="container mx-auto">
+           
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
+                    <div class="flex justify-center mb-4">
+                        <div class="rounded-full bg-white p-2">
+                             <img src="./imges/service.png" alt="24/7 Icon" class="w-16 h-16">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Services</h3>
+                    <p class="text-gray-700">
+                        We're here for you around the clock. Our 24/7 services ensure that you can get the support you need, whenever you need it.
+                    </p>
+                </div>
+
+                <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
+                    <div class="flex justify-center mb-4">
+                        <div class="rounded-full bg-white p-2"> 
+                            <img src="./imges/delivery.png" alt="Fast Delivery Icon" class="w-16 h-16">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+                    <p class="text-gray-700">
+                        Get your orders delivered quickly and efficiently. Our fast delivery service ensures that you don't have to wait long for your purchases.
+                    </p>
+                </div>
+
+                <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
+                    <div class="flex justify-center mb-4">
+                        <div class="rounded-full bg-white p-2">
+                             <img src="./imges/healthy.png" alt="Healthy Products Icon" class="w-16 h-16">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Healthy Products</h3>
+                    <p class="text-gray-700">
+                        We offer a wide range of healthy products to help you live a healthier lifestyle. Our products are carefully selected to ensure the highest quality.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+     </section>
+
+
+
+
+     <!-- second section code start  -->
+      <section>
+
+        
+      </section>
+
+
+      <!-- thard section code   -->
+      <section class="bg-white">
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 p-6">
+           
+            <div class="bg-[#115414] p-6 rounded-2xl shadow-lg w-full md:w-1/2 relative flex flex-col gap-4">
+              <div class="flex justify-between items-center">
+                <img src="./imges/dawat-logo.png" alt="Left" class="w-40 rounded-lg">
+                <button class="bg-[#63B76D] text-white px-4 py-2 rounded-lg ">Cook Exotic Dishes</button>
+                <img src="./imges/dawat-mock-up.png" alt="Right" class="w-20 h-20 rounded-lg">
+              </div>
+              <h2 class="text-white text-xl ">UP to <span class="font-bold">20% OFF</span></h2>
+              
+            </div>
+      
+          
+            <div class="bg-blue-500 p-6 rounded-2xl shadow-lg w-full md:w-1/3 flex flex-col gap-4">
+
+                    <div class="flex justify-between items-center">
+                    <img src="./imges/india-gate-logo.png" alt="Left" class="  rounded-lg">
+                      
+                    <img src="./imges/india-gate-mock-up.png" alt="Right" class="w-30 h-30 mt-16">
+                  </div>
+                  <button class="bg-[#2A4D97] w-40 text-white  py-2 rounded-lg ">World’s No.1 Rice</button>
+
+              <h2 class="text-white text-xl font-bold">UP to <span class="font-bold">40% OFF</span></h2>
+              
+            </div>
+            
+          </div>
+    </section>
+</main>
+
+
+
+
+<footer class="bg-green-700 text-white  relative"></footer>
+<section class="container bg-green-700 mx-auto px-4  absolute">
+    <div class="bg-gray-200 rounded-lg shadow-md p-8 flex flex-col md:flex-row items-center">
+
+        <div class="md:w-1/2 mb-4 md:mb-0">
+            <img src="./imges/vegetable-busket.png" alt="Grocery Basket" class="max-w-full h-auto"> 
+        </div>
+
+        <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl font-bold mb-4">Get Grocery News!</h2>
+            <p class="text-gray-700 mb-6">Exclusive training tips, tricks, product deals and more.</p>
+            <div class="">
+                <input type="email" placeholder="Enter email...." class="border border-gray-300 rounded-md px-4 py-2 w-full mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button class="bg-green-500 hover:bg-green-700 mt-6 text-white font-bold py-2 px-4 rounded-md">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="container mx-auto px-4 flex justify-between items-center">
+
+        <div>
+            <h3 class="font-bold text-xl">nature's platter</h3>
+            <p class="text-sm mt-2">Discover a world of treats, toys, and essentials handpicked for your furry friends.</p>
+        </div>
+
+        <div class="flex space-x-6">
+           
+           
+            <div class="text-center">
+                
+                <ul class="mt-2">
+                    <li><a href="#">product</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">Follow Us</h4>
+                <ul class="mt-2 flex space-x-4">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
