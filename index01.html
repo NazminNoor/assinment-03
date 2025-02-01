@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-       <!-- font Awsome link  -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- font Awsome link  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-  <style>
-    /* Custom CSS for animations */
-    .hero-image {
-        animation: fadeInUp 1s ease-in-out;
-    }
+    <style>
+        /* Custom CSS for animations */
+        .hero-image {
+            animation: fadeInUp 1s ease-in-out;
+        }
 
-    .hero-title {
-        animation: fadeInLeft 1s ease-in-out;
-    }
+        .hero-title {
+            animation: fadeInLeft 1s ease-in-out;
+        }
 
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
-    @keyframes fadeInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-20px);
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        to {
-            opacity: 1;
-            transform: translateX(0);
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
-    }
-</style>
+    </style>
 </head>
+
 <body class="bg-gray-100">
-<header>
+    <header>
 
         <!-- Navbar -->
         <nav class=" ">
             <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    
+
                 <!-- Logo -->
                 <div class="text-green-600 text-xl font-bold flex items-center">
-                    <span class="mr-2"><img src="imges/logo-header.png" alt=""></span> 
+                    <span class="mr-2"><img src="imges/logo-header.png" alt=""></span>
                 </div>
-    
+
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex space-x-6 text-gray-700">
                     <li><a href="#" class="hover:text-green-500">Product</a></li>
                     <li><a href="#" class="hover:text-green-500">Services</a></li>
                     <li><a href="#" class="hover:text-green-500">Contact us</a></li>
                 </ul>
-    
+
                 <!-- Icons & Buttons -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <button class="text-gray-600 hover:text-green-500"><span><i class="fa-solid fa-magnifying-glass"></i></span></button>
+                    <button class="text-gray-600 hover:text-green-500"><span><i
+                                class="fa-solid fa-magnifying-glass"></i></span></button>
                     <button class="text-gray-600 hover:text-green-500"><span>🛒</span></button>
-                    <button class="border border-green-500 text-green-500 px-4 py-1 rounded-md hover:bg-green-100">Login</button>
+                    <button
+                        class="border border-green-500 text-green-500 px-4 py-1 rounded-md hover:bg-green-100">Login</button>
                     <button class="bg-green-500 text-white px-4 py-1 rounded-md hover:bg-green-600">Register</button>
                 </div>
-    
+
                 <!-- Mobile Menu Button -->
                 <label for="menu-toggle" class="md:hidden text-gray-600 text-2xl cursor-pointer">☰</label>
                 <input type="checkbox" id="menu-toggle" class="hidden peer">
             </div>
-    
+
             <!-- Mobile Menu (Initially Hidden) -->
-            <div class="hidden peer-checked:flex flex-col items-center bg-white shadow-md py-4 border-b-4 border-green-500 md:hidden">
+            <div
+                class="hidden peer-checked:flex flex-col items-center bg-white shadow-md py-4 border-b-4 border-green-500 md:hidden">
                 <a href="#" class="block py-2 text-gray-700 hover:text-green-500">Product</a>
                 <a href="#" class="block py-2 text-gray-700 hover:text-green-500">Services</a>
                 <a href="#" class="block py-2 text-gray-700 hover:text-green-500">Contact us</a>
@@ -82,163 +89,387 @@
         </nav>
 
 
+
+    </header>
+
+    <main>
+
+        <!-- Hero section start -->
         <section class="hero bg-gray-200 py-20">
             <div class="container mx-auto text-center">
                 <h1 class="  hero-title  text-5xl font-bold mb-4">
                     Freshness <span class="text-green-500">You Can <br> Count</span> On, Prices You'll Love!
                 </h1>
                 <p class="text-lg mb-8">
-                    Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day! <br>
-                    "Your trusted source for fresh, delicious ingredients and unbeatable value." 
+                    Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you
+                    covered every day! <br>
+                    "Your trusted source for fresh, delicious ingredients and unbeatable value."
                 </p>
                 <div class="hero-image">
                     <img src="imges/hero-vegetables.png" alt="Hero Image" class="w-full h-auto object-cover">
                 </div>
             </div>
         </section>
-</header>
+        <!-- Hero section end -->
 
-<main>
-    <!-- First section code star  -->
-     <section class="py-20 bg-white">
-        <h2 class="text-3xl font-bold mb-4 text-left text-green-500 mx-7 ">Services</h2>
-        <div class="container mx-auto">
-           
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
-                    <div class="flex justify-center mb-4">
-                        <div class="rounded-full bg-white p-2">
-                             <img src="./imges/service.png" alt="24/7 Icon" class="w-16 h-16">
+        <!-- Service section code start  -->
+
+        <section class="py-20  bg-white">
+            <div class="w-[90%] mx-auto ">
+                <h2 class="text-3xl font-bold mb-4 text-left text-green-500 mx-7 ">Services</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
+                        <div class="flex justify-center mb-4">
+                            <div class="rounded-full bg-white p-2">
+                                <img src="./imges/service.png" alt="24/7 Icon" class="w-16 h-16">
+                            </div>
                         </div>
+                        <h3 class="text-xl font-semibold mb-2">24/7 Services</h3>
+                        <p class="text-gray-700">
+                            We're here for you around the clock. Our 24/7 services ensure that you can get the support
+                            you need, whenever you need it.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">24/7 Services</h3>
-                    <p class="text-gray-700">
-                        We're here for you around the clock. Our 24/7 services ensure that you can get the support you need, whenever you need it.
-                    </p>
-                </div>
 
-                <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
-                    <div class="flex justify-center mb-4">
-                        <div class="rounded-full bg-white p-2"> 
-                            <img src="./imges/delivery.png" alt="Fast Delivery Icon" class="w-16 h-16">
+                    <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
+                        <div class="flex justify-center mb-4">
+                            <div class="rounded-full bg-white p-2">
+                                <img src="./imges/delivery.png" alt="Fast Delivery Icon" class="w-16 h-16">
+                            </div>
                         </div>
+                        <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+                        <p class="text-gray-700">
+                            Get your orders delivered quickly and efficiently. Our fast delivery service ensures that
+                            you don't have to wait long for your purchases.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
-                    <p class="text-gray-700">
-                        Get your orders delivered quickly and efficiently. Our fast delivery service ensures that you don't have to wait long for your purchases.
-                    </p>
-                </div>
 
-                <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
-                    <div class="flex justify-center mb-4">
-                        <div class="rounded-full bg-white p-2">
-                             <img src="./imges/healthy.png" alt="Healthy Products Icon" class="w-16 h-16">
+                    <div class="bg-gray-200 rounded-lg shadow-md p-6 text-center relative">
+                        <div class="flex justify-center mb-4">
+                            <div class="rounded-full bg-white p-2">
+                                <img src="./imges/healthy.png" alt="Healthy Products Icon" class="w-16 h-16">
+                            </div>
                         </div>
+                        <h3 class="text-xl font-semibold mb-2">Healthy Products</h3>
+                        <p class="text-gray-700">
+                            We offer a wide range of healthy products to help you live a healthier lifestyle. Our
+                            products are carefully selected to ensure the highest quality.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Healthy Products</h3>
-                    <p class="text-gray-700">
-                        We offer a wide range of healthy products to help you live a healthier lifestyle. Our products are carefully selected to ensure the highest quality.
-                    </p>
-                </div>
 
+                </div>
             </div>
-        </div>
-     </section>
+        </section>
+        <!-- Service section code end  -->
 
+        <!-- Popular Products section start -->
+        <section class="w-[90%] mx-auto py-[50px] md:py-[140px]">
+            <!-- Main Heading -->
+            <h2 class="text-center text-3xl font-bold mb-10">Popular Products</h2>
 
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- First Part with Background Image -->
+                <div class="w-full h-[340px] md:h-auto  md:w-[30%] bg-cover bg-center p-6 rounded-lg text-white "
+                    style="background-image: url('./imges/vegetable-offer.png'); background-size: 300px; background-repeat: no-repeat; background-position: bottom right; background-color: rgb(113, 206, 113);">
+                    <div class="space-y-5 mt-10">
+                        <h2 class="text-5xl md:text-4xl font-extrabold">30% off</h2>
+                        <p class="text-black text-xl font-normal">Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Dolore, repellendus!</p>
+                        <button
+                            class="bg-white outline-none text-black font-normal px-6 py-2 rounded-md cursor-pointer">Buy
+                            Now</button>
+                    </div>
+                </div>
 
+                <!-- Second Part with Products -->
+                <div class="w-full md:w-[70%] flex flex-wrap gap-6 justify-center">
+                    <!-- Product Box -->
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16.png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
+                    <!-- Repeat the same structure for more products -->
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16 (1).png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16 (2).png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
+                    <!-- Product Box -->
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16.png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
+                    <!-- Repeat the same structure for more products -->
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16 (1).png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16 (2).png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
+                    <!-- Product Box -->
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16.png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
+                    <!-- Repeat the same structure for more products -->
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16 (1).png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
+                    <div class="flex bg-white rounded-md p-4 w-full sm:w-[48%] lg:w-[30%] gap-4 shadow-md">
+                        <div>
+                            <img src="./imges/Group 16 (2).png" alt="Product Image">
+                        </div>
+                        <div>
+                            <div class="flex gap-2 items-center">
+                                <img src="./imges/star.png" alt="Rating">
+                                <small>4.5</small>
+                            </div>
+                            <p class="text-lg font-semibold">Onion 1 KG</p>
+                            <p class="text-green-600 font-bold">$39.99</p>
+                        </div>
+                    </div>
 
-     <!-- second section code start  -->
-      <section>
-
-        
-      </section>
-
-
-      <!-- thard section code   -->
-      <section class="bg-white">
-
-        <div class="flex flex-col md:flex-row justify-center items-center gap-6 p-6">
-           
-            <div class="bg-[#115414] p-6 rounded-2xl shadow-lg w-full md:w-1/2 relative flex flex-col gap-4">
-              <div class="flex justify-between items-center">
-                <img src="./imges/dawat-logo.png" alt="Left" class="w-40 rounded-lg">
-                <button class="bg-[#63B76D] text-white px-4 py-2 rounded-lg ">Cook Exotic Dishes</button>
-                <img src="./imges/dawat-mock-up.png" alt="Right" class="w-20 h-20 rounded-lg">
-              </div>
-              <h2 class="text-white text-xl ">UP to <span class="font-bold">20% OFF</span></h2>
-              
+                </div>
             </div>
-      
-          
-            <div class="bg-blue-500 p-6 rounded-2xl shadow-lg w-full md:w-1/3 flex flex-col gap-4">
+        </section>
+
+        <!-- Popular Products section end -->
+
+
+        <!-- second section code start  -->
+
+        <section class="text-gray-600 body-font relative">
+            <h2 class="text-center text-3xl font-bold mb-10 text-[#179800]">Contact us </h2>
+            <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+                <div
+                    class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+                    <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map"
+                        marginheight="0" marginwidth="0" scrolling="no"
+                        src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                        style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+                    <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+                        <div class="lg:w-1/2 px-6">
+                            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+                            <p class="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+                        </div>
+                        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+                            <a class="text-indigo-500 leading-relaxed">example@email.com</a>
+                            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+                            <p class="leading-relaxed">123-456-7890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-5">
+                    <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+                    <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo
+                        fashion axe</p>
+                    <div class="relative mb-4">
+                        <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiYmZkZTQxOS00ZGRkLWU5NDYtOWQ2MC05OGExNGJiMTA3N2YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDAyNDkwMkRDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDAyNDkwMkNDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTU2NTE1NDItMmIzOC1kZjRkLTk0N2UtN2NjOTlmMjQ5ZGFjIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmJiZmRlNDE5LTRkZGQtZTk0Ni05ZDYwLTk4YTE0YmIxMDc3ZiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po+RVEoAAApzSURBVHja3Fp5bBTnFf/N7L32rm98gI0NmNAQjoAR4WihCCdNHFBDonCmJQWhtiRS01JoSlCqCqhoFeUoTUpTOSptuKSK0HIYHI5wCWwMxmAo8QXYDvg+du31ntP3zc7Osd61zR9V4o412m/mm/3mHb/3e+99a87j8UA68uh8i84F+GYfp+jcSucVdsFJCiyjcy+G17Gczn1MgcdpUInheUxkCpygQf4wVaCYKSBgGB88nc5hLL+TKTCcPSDoNVdCZF04jtPMh66HcrBno607oGT0nYG+G5JBP9giQ70vvoz+OHBDWkMzF2YPtsZQjaSPtrBBpwOv139t2GD5iSkR7v0hKaDjg8Kfrv4StR2tsBhNiqU4aaAeQ3tfUEwpzwuiMIJ4LYRNC9LYT0IGAn7My8hBVoydxoGoMI6uAD2oN+ixu6wEP9xTCBgN0NHJ7oOnl/NQxuyTk5SRr5V5eRztUzZKaA1avK0JeROeROmiNdDRfa/f/2gQ0kmfp2u+pFkdxqemw4+AuLgQJpxaYHHMSxKJygiSYKpnID0TsqbkAnapo/XrnJ1AfBKW5kwU5wMBgrLB0A9Sai/owwMx5Cqb2QyD0RgMTFFAyY18cMxzPAI8FHjwKkXEZ3lZeOWeSng+GO5McDdB5X5nC8YmjsBf5y7C/NQsEVc8GfBGexOsegPG2hLg9XklhbnoHhA0rKLAg/0xQfT0wl6/D/WOdlhMJoy0xYkKBST4cRrPSKkSWugI0pyeYu2BywmXuxcrJ0zHrtnPIUanl6H1zq3L2Hi5CLlJaSh9djVi9Ub4fL7Bg1gTsCpFmAwuvxfMg+vz5qC2qx3Ham4jLS4BNpMZPiEQfBYqQdUBz6m8RxCr7WpFnDUWH85+CavHTpJfXd/rwLpLR1F09xZ4kwVNbheaXb2w2U2DxwCn4uKg8EG/MEiw8f3uLrybvxg/y5srzmw+fwLbS79Am6cP2XHxpIQQDPR+Vudkq3d6+9De04WF2d/Cn596luARL7//07uVeOPK52jp7cao5DQ4vR7YyfIGno9aC/VjIRlKGi8o2ln0BvnxbXOfxvEXX0UmQamqtQle8gLDtcIynAwtnY5HrbNDVGDrzGdQnL9cFt5F0Fhz+ShWnfsnugNeZFM8yIHOc8p6gyoQ5goOWrobRVbe9EUR/lByVn706axxuLZiPV6ZNAMNXW1ocvWIwoYsz5MAbuL3OqLIyUmpOP/camyePEf+/umme5hyrBCFd0qRGpeENKtNhKPac6HoDM/QfDQIaXDMKQnKajDCTFl646lDWPTZbgrmLvFROyW73fkvovCZl2GiQKzpbBW/xjJ6IwXqw55urJ8yB1eeX4NZKSPlV2ypOIcFJ/eiqqcDoxPTYeR0YkKDmgi4IeYBjXacJiDkCx9Rno3Yx2pOw+Gqm7jS8hXenV+AZbnBIHyVktC8kdn4ydnDOHH3NmNzZCSl44/zX8CS0RPk5asdHSJkzjZWI9GeALvBLFkdETI792i1kIZSubD4ECmTWYhHbkoaGnscWH54D05NnYWd8wpgpCAdQ5x9vOAVbC0/JzLVjpn5SDFb5WU+ri7HG1dPoocCPzMxVVzXh4CUMyBRNjQxFK3C7V9Oh3tBjgFBU9eEvJERa0dfwIqPyy/iUnMDPpr3POakZYnzb039tubFbUSHr5Uex76aCliJPrPjk0lwIWgqThFazj9qJlNZUp2J+QEhFEmRkC7S4Se3G8jq45LTcbO9GXMPfYLt18718+Zhgsq0I4XYV30dGXHJSCaP+CKV0+HQVddNEeTkMVgmi1JxqhdmYjAIjIlLRBIlns0XjuF7RXtQ5+iE0+fBprJTWFS8l4LZQfSYSjTLBWEIxeIyWUBLv8zbrOyI1mMMueAXQjTECzKE2A1BrHmCVywIGRvFElUeb6jGwqJ/wE4ZuryjCSOoPGYMFqLHkEGEaNVpv4oAg5fT/WIgyiKy2blglhAETnZMKMBziFk6PG40E+4zY+PETO6HEE5tEd6jULYIlQA3YIs6sAfCDCGor7j+TCXI8gkUG1TRksXF6hXB8nogOow0JYR3PUNqaKSjL1T1MSsLIXpDfwvKWVKJF0FyV1DpsD453MoRy5hQVcvaECq3yXdeVXc2oAIsC7KbdkpW/vZW3KeanOOlQJLre17bmYV6AekZQccp/M1D6dx0yj2l2RmgY2PruXuQYEtGosk0NAWYi9i5YfZ30UolbKOzGzEmo9IyQrV4iD14pW/QBCZULai6rgnzgkaRkN9YcqOA9wd8eH3MdCQYLfB5ff2RR61aN2vAwpUwUjf2TTq8Xm9/yAEOfqBNo//NXlqUsdgECxHv+bzeaHEO3ZYtW96kTw3AWCN95mIZXli7EWUVt/GXTz/Dpas30NLeiV9u/QD7/1WMC6UVMJsMeHP7TuRkjURGagp++usdqKt/gPrGJvzit+9h198PItDbh5wnxmFJxTGMMdmQSaXy72uu4pP6SixOHSNKVVByCA5KeHkJabjd3YptNSWI15uwrboEeXEplFvM8hZL2O6gJ+LWIvu022KQm52Jg0VnEGeLxYI5eTAbDbDHWqGnEjl9RBIaH7bgwP5/w+3xYsHcGfjo/UKsXf8D1FgsqLhVhR8tW4wNb7+HZnhweooPDZVn8LfJC7Hp2hFMTAkKX9b5EEfvXUe7rw8/Hj0ZLsL8keY6fCdxFH3ew4bsaVGbmailBMPbtEkTcGDX75CanIili/Px83UrwJPgPWRRMwW1nmp+i9mEaTOnkZf+Q574EzIfH4/0lCQkxtuROTKN4sggJgcXNTNrR02Ejuwz/fxeTE3NwXSyLDverirBytyZYg4501KP3Jh4pJljYaX1M0wxiJWa/BC5PFI57fN50e3sQUtbp3hdXnkHReSRdWuWITHBDlefGz6/Hy8VLBCFrb3XiBo6Hxubhco7tYixmLFzx6/w1JL5WH3jc/yGBG1wO2Gi4u9QUy3qqC8uar2HfLJ2rbMdH9y/jncmzIWHFPYQA3X7PegVBCVLRvAEP5ACDHZJ8XGwxVjEa+aNlIw0XLt5BxfLKuD3B+By9WHdqu9jx+bXERtjhZcSIIPUk0+Mx8kDH2LVysViB9fe48QMewpey55C5ZSAZKLF9++W4+XUcdg/vQAXZi1FY59TVOwxawJSDBZYdAasuHIIB7+qIgOZIv4OoKFRtYtCTNTa3gWTUQ9bbIwIn06HAwE/2zGjeyRwW2cXskelUw+sQ8ODZjEVWMjyXuLsEaSwnzzEtge7/F4k6I00z4n7Sqz576bAzSK46KRN5CZqPd00Z6cAtpKXWr1u1FKrmWm1I8McQ+9VsjEf3KVwRFRAHemhfOB2u2GKkg0ZQ7ANp/DcIXI3y+z0MrZZ7CelWP9g1BkUONC82xfcNjSy2ikQhEqAFObZ7oe46xug0sZDcFE2hgdUQIMxloEF5QcH9S7xYD98aDyqqna5cNaLUM8JMr61vUMYQhz6wRKY3DRF2N4OV3jAHzPC95xU11yU4lRA2NZOFBrlMHwP7v/iZ9biYSx/8bD/VwPmgVsI/uPEcDuYzLe44f7vNv8VYAB02UEWdC0FyQAAAABJRU5ErkJggg==&quot;) !important; background-repeat: no-repeat; background-size: 20px; background-position: 97% center; cursor: auto;"
+                            data-temp-mail-org="0">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                        <textarea id="message" name="message"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                    <button
+                        class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                    <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook
+                        viral artisan.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- thard section code   -->
+        <section class="bg-white h-[1250px] md:h-[80vh] ">
+
+            <p class="text-[#179800] text-3xl ml-32 mt-32">Arrival & Offers</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 p-6">
+
+                <div
+                    class="bg-[#115414] h-[340px] p-6 rounded-2xl shadow-lg w-full md:w-1/2 h- relative flex flex-col gap-4">
+                    <div class="flex justify-between ">
+                        <div class="px-10 my-8 space-y-8 md:space-y-12">
+                            <img src="./imges/dawat-logo.png" alt="Left" class="w-40 rounded-lg">
+                            <button class="bg-[#63B76D] text-white px-4 py-2 rounded-lg ">Cook Exotic
+                                Dishes</button>
+                            <h2 class="text-white text-2xl md:text-4xl ">UP to <span class="font-bold">20%
+                                    OFF</span>
+                            </h2>
+                        </div>
+                        <div>
+                            <img src="./imges/dawat-mock-up.png" alt="Right" class=" rounded-lg">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="bg-[#102861] p-6 rounded-2xl shadow-lg w-full md:w-1/3 flex flex-col gap-4">
 
                     <div class="flex justify-between items-center">
-                    <img src="./imges/india-gate-logo.png" alt="Left" class="  rounded-lg">
-                      
-                    <img src="./imges/india-gate-mock-up.png" alt="Right" class="w-30 h-30 mt-16">
-                  </div>
-                  <button class="bg-[#2A4D97] w-40 text-white  py-2 rounded-lg ">World’s No.1 Rice</button>
+                        <img src="./imges/india-gate-logo.png" alt="Left" class="  rounded-lg">
 
-              <h2 class="text-white text-xl font-bold">UP to <span class="font-bold">40% OFF</span></h2>
-              
+                        <img src="./imges/india-gate-mock-up.png" alt="Right" class="w-30 h-30 mt-16">
+                    </div>
+                    <button class="bg-[#2A4D97] w-40 text-white  py-2 rounded-lg ">World’s No.1 Rice</button>
+
+                    <h2 class="text-white text-2xl md:text-4xl font-bold">UP to <span class="font-bold">40%
+                            OFF</span>
+                    </h2>
+
+                </div>
+
             </div>
-            
-          </div>
-    </section>
-</main>
+            <!-- ab -->
+            <div
+                class="bg-[#EFEBE3] w-[70%] mx-auto rounded-lg shadow-md p-8 flex flex-col md:flex-row items-center absolute left-[75px] md:left-[200px]">
+
+                <div class="md:w-1/2 mb-4 md:mb-0">
+                    <img src="./imges/vegetable-busket.png" alt="Grocery Basket" class="max-w-full h-auto">
+                </div>
+
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4">Get Grocery News!</h2>
+                    <p class="text-gray-700 mb-6">Exclusive training tips, tricks, product deals and more.</p>
+                    <div class="">
+                        <input type="email" placeholder="Enter email...."
+                            class="border border-gray-300 rounded-md px-4 py-2 w-full mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button
+                            class="bg-green-500 hover:bg-green-700 mt-6 text-white font-bold py-2 px-4 rounded-md">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
 
 
-<footer class="bg-green-700 text-white  relative"></footer>
-<section class="container bg-green-700 mx-auto px-4  absolute">
-    <div class="bg-gray-200 rounded-lg shadow-md p-8 flex flex-col md:flex-row items-center">
+    <footer class="bg-[#179800]">
+        <div class=" text-white w-[90%] p-8 md:p-32 mx-auto">
 
-        <div class="md:w-1/2 mb-4 md:mb-0">
-            <img src="./imges/vegetable-busket.png" alt="Grocery Basket" class="max-w-full h-auto"> 
-        </div>
 
-        <div class="md:w-1/2 text-center md:text-left">
-            <h2 class="text-3xl font-bold mb-4">Get Grocery News!</h2>
-            <p class="text-gray-700 mb-6">Exclusive training tips, tricks, product deals and more.</p>
-            <div class="">
-                <input type="email" placeholder="Enter email...." class="border border-gray-300 rounded-md px-4 py-2 w-full mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <button class="bg-green-500 hover:bg-green-700 mt-6 text-white font-bold py-2 px-4 rounded-md">Subscribe</button>
+            <div class="flex-1 mt-40 space-y-8 md:space-y-0 md:flex md:justify-between ">
+
+                <div>
+                    <h3 class="font-bold text-xl">nature's platter</h3>
+                    <p class="text-sm mt-2">Discover a world of treats, toys, and essentials handpicked for your furry
+                        friends.
+                    </p>
+                </div>
+                <div>
+                    <ul class="space-y-4 md:space-y-8">
+                        <li><a href="#">product</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold">Follow Us</h4>
+                    <ul class="mt-2 flex space-x-4">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-    <div class="container mx-auto px-4 flex justify-between items-center">
 
-        <div>
-            <h3 class="font-bold text-xl">nature's platter</h3>
-            <p class="text-sm mt-2">Discover a world of treats, toys, and essentials handpicked for your furry friends.</p>
-        </div>
-
-        <div class="flex space-x-6">
-           
-           
-            <div class="text-center">
-                
-                <ul class="mt-2">
-                    <li><a href="#">product</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold">Follow Us</h4>
-                <ul class="mt-2 flex space-x-4">
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
 </body>
+
 </html>
